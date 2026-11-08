@@ -361,6 +361,10 @@ p {
   overflow-wrap: anywhere;
 }
 
+.contact-address {
+  font-style: normal;
+}
+
 .text-link {
   text-decoration: underline;
 }

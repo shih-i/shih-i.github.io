@@ -144,6 +144,13 @@ def build(base_path: str = "") -> None:
         + personal_paragraphs + (f'<p>{personal_links}</p>' if personal_links else '') + '</section>'
         if personal_paragraphs else ''
     )
+    address_lines = [escape(line) for line in profile.get("postal_address", [])]
+    if profile.get("office"):
+        address_lines.insert(0, f'<strong>Office {escape(profile["office"])}</strong>')
+    contact_address = (
+        '<address class="contact-address">' + '<br>'.join(address_lines) + '</address>'
+        if address_lines else ''
+    )
     home = f'''<header class="page-header"><h1>About me</h1></header>
       <div class="intro">{paragraphs}</div>
       <section class="section-block" aria-labelledby="research-interests">
@@ -159,6 +166,7 @@ def build(base_path: str = "") -> None:
       <section class="section-block" aria-labelledby="contact">
         <h2 id="contact">Contact</h2>
         <p class="contact-note">You can reach me at <a href="mailto:{escape(profile['email'])}">{escape(profile['email'])}</a>.</p>
+        {contact_address}
       </section>'''
     (output / "index.html").write_text(render(template, profile, home, "About", base_path), encoding="utf-8")
     groups = []

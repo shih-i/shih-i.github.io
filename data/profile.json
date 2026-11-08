@@ -11,6 +11,13 @@
   "group_url": "https://sites.google.com/view/inphyni-theoretical-physics/",
   "location": "Nice, France",
   "email": "shiyi.wei@univ-cotedazur.fr",
+  "office": "2-4",
+  "postal_address": [
+    "Institut de Physique de Nice (INPHYNI)",
+    "Université Côte d’Azur et CNRS",
+    "17 rue Julien Lauprêtre",
+    "06200 Nice, France"
+  ],
   "photo": "assets/shiyi.jpg",
   "photo_alt": "Portrait of Shiyi Wei outdoors",
   "description": "Shiyi Wei is a PhD student in theoretical physics at Université Côte d’Azur and INPHYNI, working on quantum diffusion, nonequilibrium transport and fluctuations.",
